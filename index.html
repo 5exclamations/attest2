@@ -12,13 +12,13 @@
 //     }
 // console.log(gettime())
     class Message {
-        constructor(name, text){
-            this.name = name;
+        constructor(author, text) extends {
+            this.author = author;
             this.time = new Date();
             this.text = text;
         }
         toString(){
-            return;
+            return this.time + this.;
         }
     }
     class Messenger{
