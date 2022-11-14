@@ -6,32 +6,28 @@
 </head>
 <body>
 <script>
-//     function gettime() {
-//     let now = new Date();
-//     return `${now.getHours()}:${now.getMinutes()}`
-//     }
-// console.log(gettime())
     class Message {
-        constructor(author, text) extends {
+        constructor(author, text) {
             this.author = author;
             this.time = new Date();
             this.text = text;
         }
         toString(){
-            return this.time + this.;
+            return this.time + this.author + ":" + this.text;
         }
     }
-    class Messenger{
+    class Messenger extends Message{
         constructor(){
+            super();
             this.history = [];
         }
         show_history(){
             for (let i=0; i<this.history.length; i++){
-                console.log(this.history[i]);
+                console.log(this.time.getHours() + ":" + this.time.getMinutes() + " " + Object.entries(this.history[i])  );
             }
         }
         send(author, text){
-            this.history[this.history.length+1] = {author: text};
+            this.history[this.history.length] = {[author]: text};
         }
     }
     const User = new Messenger()
