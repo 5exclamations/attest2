@@ -5,6 +5,37 @@
     <title>Document</title>
 </head>
 <body>
-    
-</body>
+<script>
+//     function gettime() {
+//     let now = new Date();
+//     return `${now.getHours()}:${now.getMinutes()}`
+//     }
+// console.log(gettime())
+    class Message {
+        constructor(name, text){
+            this.name = name;
+            this.time = new Date();
+            this.text = text;
+        }
+        toString(){
+            return;
+        }
+    }
+    class Messenger{
+        constructor(){
+            this.history = [];
+        }
+        show_history(){
+            for (let i=0; i<this.history.length; i++){
+                console.log(this.history[i]);
+            }
+        }
+        send(author, text){
+            this.history[this.history.length+1] = {author: text};
+        }
+    }
+    const User = new Messenger()
+    User.send('sdf', 'asd')
+    User.show_history();
+</script>
 </html>
